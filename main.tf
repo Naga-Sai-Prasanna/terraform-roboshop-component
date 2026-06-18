@@ -205,12 +205,12 @@ resource "aws_autoscaling_policy" "main" {
 }
 
 
-# listner rule
+#listener rule
 #this depends on target group
 #if frontend frontend-dev-prasanna.fun
 
-resource "aws_lb_listner_rule" "main" {
-  listner_arn = local.alb_listener_arn
+resource "aws_lb_listener_rule" "main" {
+ listener_arn = local.alb_listener_arn
   priority = var.rule_priority
 
   action {
